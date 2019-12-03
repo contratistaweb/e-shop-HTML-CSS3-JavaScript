@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./../css/bootstrap.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-shop | Sobre Nosotros</title>
+    <script src="./../js/app.js"></script>
+</head>
+
+<body>
+    <div class="container mt-1 mb-1">
+        <header class="col-12 bg-dark mt-1">
+            <div class="text-light">
+                <a href="./../index.html" class="nav-link">
+                    <h1>Café de mi tierra</h1>
+                </a>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-12">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./login.html" onclick="logout()">
+                            <script>
+                                loginNav()
+                            </script>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./shoppingcar.html">Carrito
+                                <script>
+                                     productsInCar()
+                                     </script>
+                            </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Proximamente</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+        <!-- SECTION  -->
+        <section class="jumbotron jumbotron-fluid col-12 mt-2">
+            <div class="container">
+                <article class="row justify-content-center">
+                    <div class="col-md-12 justify-content-center">
+                        <h3 class="text-center">Conozca Nuestra Compañia</h3>
+                        <div class="text-center">
+                            <a class="btn btn-primary m-2" data-toggle="collapse" href="#historia" role="button" aria-expanded="false" aria-controls="historia">
+                                Nuestra Historia
+                            </a>
+                            <a class="btn btn-primary m-2" data-toggle="collapse" href="#mision" role="button" aria-expanded="false" aria-controls="mision">
+                                Nuestra Mision
+                            </a>
+                            <a class="btn btn-primary m-2" data-toggle="collapse" href="#vision" role="button" aria-expanded="false" aria-controls="vision">
+                                Nuestra Vision
+                            </a>
+                        </div>
+                    </div>
+                    <div class="collapse col-md-5 mt-3" id="historia">
+                        <h3 class="text-center">Nuestra Historia</h3>
+                        <p class="text-justify">Nacemos de una idea absurda y comica expuesta en clase, pero no tomo mucho tiempo para que esa comica idea se convirtiera en una oportunidad de negocio, que plantea la satisfaccion de los amantes del café con una gran variedad
+                            de este mismo, un sin fin de sabores que invita a recordar o explorar los diferentes sabores de esta gran bebida, consumida no solo en el area local, si no tambien a nivel nacional e internacional.
+                        </p>
+                    </div>
+                    <div class="collapse col-md-5 mt-3" id="mision">
+                        <h3 class="text-center">Nuestra Mision</h3>
+                        <p class="text-justify">CAFÉ DE MI TIERRA, llega para satisfacer el paladar de consumidores de cafe, mediante una amplia variedad de granos y estilos de preparacion, mediante la implementacion de una plataforma amigable que permitiendo a los consumidores
+                            obtener el producto con facilidad</p>
+                    </div>
+                    <div class="collapse col-md-5 mt-3" id="vision">
+                        <h3 class="text-center">Nuestra Vision</h3>
+                        <p class="text-justify">La compañia CAFÉ DE MI TIERRA aspira a ser la empresa numero uno en el mercado del café en el proximo año, fuertemente posicionados ante las otras empresas del sector, y preferidos por nuestros consumidores</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- FOOTER  -->
+        <footer class="bg-dark text-light container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h5>Mapa del sitio</h5>
+                    <ul>
+                        <li><a class="nav-link" href="./../index.html">Inicio</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./login.html" onclick="logout()">
+                                <script>
+                                    loginNav()
+                                </script>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="./shoppingcar.html">Carrito
+                                <script>
+                                     productsInCar()
+                                     </script>
+                            </a>
+                        </li>
+                        <li><a class="nav-link" href="./about.html">Sobre Nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li>Nuestras politicas</li>
+                        <li>Terminos y condiciones</li>
+                        <li>contactenos</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h5>Informacion de la Empresa</h5>
+                    <ul>
+                        <li>Direccion: CL 73 # 47 - 86</li>
+                        <li>Ciudad: Medellin - Antioquia</li>
+                        <li>Pais: Colombia</li>
+                        <li>Cel.: +57 300 633 56 31</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="col-12 text-center text-danger">Desarrollado por Luillin Escobar empleando HTML5, CSS3, JavaScript y Bootstrap.
+        </div>
+    </div>
+    <!-- Fin de Container-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./../js/bootstrap.min.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/popper.min.js"></script>
+</body>
+
+</html>
