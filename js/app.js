@@ -179,7 +179,7 @@ function productoSeleccionado() {
 function addCar() {
     var sellUnds = document.getElementById('sellUnds').value;
     var items = JSON.parse(localStorage.getItem("producto"));
-    if (sellUnds == '' || sellUnds > 100 || Number.isInteger(sellUnds) == false) {
+    if (sellUnds == '' || sellUnds > 100) {
         alert('El producto no fue agregado a tu carrito debido a que no proporcionaste un numero valido de unidades a comprar, intentalo nuevamente.');
     } else {
         var carShop = [{
