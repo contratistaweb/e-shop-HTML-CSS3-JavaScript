@@ -8,11 +8,14 @@ var user = {
 function login() {
     if (document.getElementById('email').value == user.email &&
         document.getElementById('password').value == user.password) {
+            window.location = './../index.html';
         if (JSON.parse(localStorage.getItem('sesionState')) == null) {
             localStorage.setItem('sesionState', 'true');
 
         }
 
+    }else{
+        alert('Ingresa un usuario y contraseña valido')
     }
 
 };
@@ -165,7 +168,7 @@ function productoSeleccionado() {
         '<p class="card-text"><small class="text-muted">Price: ' + productSelected.price + '</small></p>' +
         '<div class="col-12 d-flex justify-content-center align-items-center">' +
         '<a href="./../index.html" class="btn btn-primary m-1 col-3">atras</a>' +
-        '<input type="number" class="form-control col-3" id="sellUnds" aria-describedby="sellUndsHelp" placeholder="0 - ' + productSelected.unds + '" required>' +
+        '<input type="number" class="form-control col-3" id="sellUnds" aria-describedby="sellUndsHelp" placeholder="' + productSelected.unds + '" required>' +
         '<a href="./product.html" class="btn btn-primary m-1 col-3" onClick="addCar()">Comprar</a>' +
         '</div>' +
         '</div>' +
@@ -310,5 +313,5 @@ function cleanShoppingCar() {
     localStorage.removeItem('shoppingCar');
     localStorage.removeItem('sesionState');
     localStorage.removeItem('producto');
-    alert('Gracias por su compra, disfrute su tu cafe y vuelve pronto.')
+    alert('Gracias por su compra, disfrute su tu café y vuelve pronto.')
 }
