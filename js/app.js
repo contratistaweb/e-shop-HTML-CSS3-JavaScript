@@ -8,21 +8,19 @@ var user = {
 function login() {
     if (document.getElementById('email').value == user.email &&
         document.getElementById('password').value == user.password) {
-            window.location = './../index.html';
+        window.location = './../index.html';
         if (JSON.parse(localStorage.getItem('sesionState')) == null) {
             localStorage.setItem('sesionState', 'true');
 
         }
 
-    }else{
-        alert('Ingresa un usuario y contraseña valido')
+    } else {
+        alert('Ingresa un usuario y contraseña valido');
     }
-
-};
-
+}
+var loginState = JSON.parse(localStorage.getItem('sesionState'));
 // alternar entre Iniciar o Cerrar Sesion
 function loginNav() {
-    var loginState = JSON.parse(localStorage.getItem('sesionState'));
     document.open();
     if (loginState == true) {
         document.write('Cerrar Sesion');
@@ -33,7 +31,6 @@ function loginNav() {
 }
 
 function logout() {
-    var loginState = JSON.parse(localStorage.getItem('sesionState'));
     if (loginState == true) {
         localStorage.removeItem('sesionState');
     }
@@ -119,7 +116,6 @@ var product = [{
 var i;
 
 function crearProductos() {
-    var loginState = JSON.parse(localStorage.getItem('sesionState'));
     document.open();
     if (loginState == true) {
         for (i = 0; i < product.length; i++) {
@@ -167,9 +163,9 @@ function productoSeleccionado() {
         '<p class="card-text"><small class="text-muted">Unidades disponibles: ' + productSelected.unds + '</small></p>' +
         '<p class="card-text"><small class="text-muted">Price: ' + productSelected.price + '</small></p>' +
         '<div class="col-12 d-flex justify-content-center align-items-center">' +
-        '<a href="./../index.html" class="btn btn-primary m-1 col-3">atras</a>' +
-        '<input type="number" class="form-control col-3" id="sellUnds" aria-describedby="sellUndsHelp" placeholder="' + productSelected.unds + '" required>' +
-        '<a href="./product.html" class="btn btn-primary m-1 col-3" onClick="addCar()">Comprar</a>' +
+        '<a href="./../index.html" class="btn btn-primary m-1 col-md-4">atras</a>' +
+        '<input type="number" class="form-control col-md-4" id="sellUnds" aria-describedby="sellUndsHelp" placeholder="' + productSelected.unds + '" required>' +
+        '<a class="btn btn-primary m-1 col-md-4" onClick="addCar()">Comprar</a>' +
         '</div>' +
         '</div>' +
         '</div>' +
@@ -184,6 +180,7 @@ function addCar() {
     var items = JSON.parse(localStorage.getItem("producto"));
     if (sellUnds == '' || sellUnds > 100) {
         alert('El producto no fue agregado a tu carrito debido a que no proporcionaste un numero valido de unidades a comprar, intentalo nuevamente.');
+        window.location = './product.html';
     } else {
         var carShop = [{
             name: items.name,
@@ -207,6 +204,7 @@ function addCar() {
             localStorage.setItem("shoppingCar", JSON.stringify(shoppingCar));
         }
         alert('El producto se agrego con exito a su Carito de Compras');
+        window.location = './shoppingcar.html';
     }
 }
 
@@ -239,8 +237,8 @@ function productInShoppingCar() {
                     '</div>');
             }
             document.write('<div class="col-12 d-flex justify-content-center">' +
-                '<a href="./../index.html" class="btn btn-primary m-1 col-3">atras</a>' +
-                '<a href="paid.html" class="btn btn-success m-1 col-3">pagar</a>' +
+                '<a href="./../index.html" class="btn btn-primary m-1 col-md-4">¡Ir por más!</a>' +
+                '<a href="paid.html" class="btn btn-success m-1 col-md-4">Pagar</a>' +
                 '</div>')
         }
     } else {
@@ -251,7 +249,6 @@ function productInShoppingCar() {
 
 // Numero de Productos en el Carrito de Compras
 function productsInCar() {
-    var loginState = JSON.parse(localStorage.getItem('sesionState'));
     var myCar = JSON.parse(localStorage.getItem("shoppingCar"));
     document.open();
     if (loginState == true) {
@@ -302,7 +299,7 @@ function buyProducts() {
         '</table>' +
         '</div>' +
         '<div class="d-flex justify-content-center col-12">' +
-        '<a href="shoppingcar.html" class="btn btn-success m-1 col-3" onClick="cleanShoppingCar()">Finalizar Compra</a>' +
+        '<a class="btn btn-success m-1 col-md-4" onClick="cleanShoppingCar()">Finalizar Compra</a>' +
         '</div>'
     );
     document.close();
@@ -311,7 +308,7 @@ function buyProducts() {
 // ---> para pagar y destruir ShoppingCar
 function cleanShoppingCar() {
     localStorage.removeItem('shoppingCar');
-    localStorage.removeItem('sesionState');
     localStorage.removeItem('producto');
     alert('Gracias por su compra, disfrute su tu café y vuelve pronto.')
+    window.location = './../index.html';
 }
