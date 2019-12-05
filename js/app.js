@@ -334,8 +334,8 @@ function valContact() {
         if (contactNombre.length > 20 || contactTelefono.length > 12 || contactComentario.length > 300) {
             alert('excediste el numero de caracteres en uno de los campos. recuerda que puedes utilizar: 20 para tu nombre completo - 12 para tu numero telefonico - 300 para el comentario de informacion.')
         } else {
-
             alert('Gracias por contactarnos, sus opiniones son muy importante para nosotros. Responderemos lo mas pronto posible a sus inquietudes.');
+            window.location = './contact.html';
         }
     }
 }
