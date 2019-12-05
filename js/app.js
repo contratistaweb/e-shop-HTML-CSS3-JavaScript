@@ -126,11 +126,12 @@ var product = [{
 
 // ---> cargar los roductos en la tienda
 var i;
+var resB = document.getElementById('resB');
 
 function crearProductos() {
     document.open();
     if (loginState == true) {
-        if (document.getElementById('resB') === null) {
+        if (resB === null) {
             for (i = 0; i < product.length; i++) {
                 var id = product[i].id;
                 document.write(
@@ -318,6 +319,25 @@ function buyProducts() {
         '</div>'
     );
     document.close();
+}
+
+// ---> formulario de contacto
+function valContact() {
+    var contactNombre = document.getElementById('contactNombre').value;
+    var contactEmail = document.getElementById('contactEmail').value;
+    var contactTelefono = document.getElementById('contactTelefono').value;
+    var contactMotivo = document.getElementById('contactMotivo').value;
+    var contactComentario = document.getElementById('contactComentario').value;
+    if (contactNombre == '' || contactEmail == '' || contactTelefono == '' || contactMotivo == '') {
+        alert('Tiene campos obligatorios pendientes por rellenar');
+    } else {
+        if (contactNombre.length > 20 || contactTelefono.length > 12 || contactComentario.length > 300) {
+            alert('excediste el numero de caracteres en uno de los campos. recuerda que puedes utilizar: 20 para tu nombre completo - 12 para tu numero telefonico - 300 para el comentario de informacion.')
+        } else {
+
+            alert('Gracias por contactarnos, sus opiniones son muy importante para nosotros. Responderemos lo mas pronto posible a sus inquietudes.');
+        }
+    }
 }
 
 // ---> para pagar y destruir ShoppingCar

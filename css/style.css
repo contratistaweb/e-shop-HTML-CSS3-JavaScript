@@ -1,15 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap');
 body {
     animation: entrada 3s;
+    font-family: 'Alegreya Sans', sans-serif !important;
 }
-header{
+
+header {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
 
-footer{
+footer {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
+
 @keyframes entrada {
     0% {
         margin-top: 150%;

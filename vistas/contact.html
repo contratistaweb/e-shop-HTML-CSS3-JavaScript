@@ -17,7 +17,7 @@
         <header class="col-12 bg-dark mt-1">
             <div class="text-light">
                 <a href="./../index.html" class="nav-link">
-                    <h1>café de mi tierra</h1>
+                    <h1>Café de mi Tierra</h1>
                 </a>
             </div>
         </header>
@@ -69,40 +69,40 @@
                 <article class="d-flex justify-content-center row">
                     <div class="bg-light p-2 rounded">
                         <h3>Contactenos</h3>
-                        <form class="needs-validation">
+                        <form class="was-validated">
                             <div class="form-group">
-                                <label for="nombre">Nombre completo: </label>
-                                <input type="text" class="form-control" name="nombre" id="nombre" required>
+                                <label for="contactNombre">Nombre completo: </label>
+                                <input type="text" class="form-control" name="contactNombre" id="contactNombre" maxlength="20" required>
                                 <div class="valid-feedback">
                                     Bien hecho!
                                 </div>
                                 <div class="invalid-feedback">
-                                    intruduce solo texto!
+                                    Intruduce solo texto con maximo 20 caracteres!
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="email">correo electronico (email): </label>
-                                <input type="email" class="form-control" name="email" id="contactEmail" required>
+                                <label for="contactEmail">correo electronico (email): </label>
+                                <input type="email" class="form-control" name="contactEmail" id="contactEmail" maxlength="30" required>
                                 <div class="valid-feedback">
                                     Bien hecho!
                                 </div>
                                 <div class="invalid-feedback">
-                                    intruduce un email valido!
+                                    Intruduce un email!
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="telefono">Numero de contacto: </label>
-                                <input type="number" class="form-control" name="telefono" id="telefono" required>
+                                <label for="contactTelefono">Numero de contacto: </label>
+                                <input type="number" class="form-control" name="contactTelefono" id="contactTelefono" maxlength="12" required>
                                 <div class="valid-feedback">
                                     Bien hecho!
                                 </div>
                                 <div class="invalid-feedback">
-                                    intruduce solo numeros!
+                                    intruduce solo numeros. Maximo 12 digitos!
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="motivo">motivo de contacto: </label>
-                                <select class="form-control" name="motivo" id="motivo" required>
+                                <label for="contactMotivo">motivo de contacto: </label>
+                                <select class="form-control" name="contactMotivo" id="contactMotivo" required>
                                     <optgroup>
                                         <option value="pqrs">Quejas y Reclamos</option>
                                         <option value="llamar">permitanos contactarle</option>
@@ -117,11 +117,11 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="comentario">amplianos la informacion: </label><br>
-                                <textarea rows="5" cols="30" name="comentario" id="comentario" class="rounded"></textarea>
+                                <label for="contactComentario">amplianos la informacion: </label><br>
+                                <textarea rows="5" cols="30" maxlength="300" name="contactComentario" id="contactComentario" class="rounded"></textarea>
                             </div>
                             <div class="text-center">
-                                <a class="btn btn-primary">Enviar</a>
+                                <a class="btn btn-primary" onclick="valContact()">Enviar</a>
                             </div>
                         </form>
                     </div>
