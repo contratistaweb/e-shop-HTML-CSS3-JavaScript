@@ -17,7 +17,7 @@ const filtrar = () => {
             let nombre = prod.name.toLowerCase();
             if (nombre.indexOf(buscar) !== -1) {
                 resultado.innerHTML +=
-                    `<div class="card m-2" style = "width: 18rem;" id="resB">` +
+                    `<div class="card m-2 resB" style = "width: 18rem;">` +
                     `<img src="./img/${prod.name}.jpg" class="card-img-top imagen" alt="${prod.name}">` +
                     `<div class="card-body">` +
                     `<h5 class="card-title">${prod.name}</h5>` +
@@ -29,9 +29,8 @@ const filtrar = () => {
                     `</div>` +
                     `</div>`;
             }
-
         }
-        if (document.getElementById('resB') === null) {
+        if (document.getElementsByClassName('resB').length === 0) {
 
             resultado.innerHTML =
                 `<h3 class="col-md-12 my-3 text-center">Resultado de la busqueda</h3>` +

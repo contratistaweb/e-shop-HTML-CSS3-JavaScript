@@ -126,12 +126,12 @@ var product = [{
 
 // ---> cargar los roductos en la tienda
 var i;
-var resB = document.getElementById('resB');
+var search = document.getElementsByClassName('resB').length;
 
 function crearProductos() {
     document.open();
     if (loginState == true) {
-        if (resB === null) {
+        if (search === 0) {
             for (i = 0; i < product.length; i++) {
                 var id = product[i].id;
                 document.write(
